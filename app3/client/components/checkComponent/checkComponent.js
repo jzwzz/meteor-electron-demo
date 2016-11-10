@@ -1,14 +1,14 @@
 import { Meteor } from 'meteor/meteor'
 
-import { ReactiveDict } from 'meteor/reactive-dict'
+import { ReactiveVar } from 'meteor/reactive-var';
 
 import './checkComponent.html';
 export default function (Template) {
 
 
-    Template['checkComponent'].onCreated(function helloOnCreated() {
+    Template['checkComponent'].onCreated(function checkComponentOnCreated() {
       // counter starts at 0
-      this.counter = new ReactiveVar(0);
+      // this.counter = new ReactiveVar(0);
     });
 
     Template['checkComponent'].helpers({

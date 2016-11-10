@@ -34,6 +34,7 @@ export default function () {
           conn.end();
         }).on('data', function(data) {
           console.log('STDOUT: ' + data);
+          conn.end();
         }).stderr.on('data', function(data) {
           console.log('STDERR: ' + data);
         });
