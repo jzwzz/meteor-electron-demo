@@ -1,0 +1,16 @@
+<template name="welcome">
+    <h1>welcome Component</h1>
+
+    <button id='abc'>click me</button>
+
+    {{#each tasks}}
+      {{> task}}
+      1
+    {{/each}}
+
+
+</template>
+
+<template name="task">
+  <li>{{text}}</li>
+</template>

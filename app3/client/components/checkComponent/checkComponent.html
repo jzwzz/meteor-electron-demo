@@ -1,0 +1,15 @@
+<template name="checkComponent">
+    <h1>checkComponent Component</h1>
+
+
+    <button id='abc'>click me</button>
+
+    {{#each tasks}}
+      {{> subtask}}
+    {{/each}}
+</template>
+
+
+<template name="subtask">
+  <li>{{text}}</li>
+</template>
