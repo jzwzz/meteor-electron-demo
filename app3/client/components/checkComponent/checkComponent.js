@@ -2,10 +2,13 @@ import { Meteor } from 'meteor/meteor'
 
 import { ReactiveDict } from 'meteor/reactive-dict'
 
+import './checkComponent.html';
 export default function (Template) {
 
-    Template['checkComponent'].onCreated(function bodyOnCreated() {
-      this.state = new ReactiveDict();
+
+    Template['checkComponent'].onCreated(function helloOnCreated() {
+      // counter starts at 0
+      this.counter = new ReactiveVar(0);
     });
 
     Template['checkComponent'].helpers({
@@ -14,6 +17,9 @@ export default function (Template) {
         { text: 'This is task 2' },
         { text: 'This is task 3' },
       ],
+      counter() {
+        return Template.instance().counter.get();
+      },
     });
 
 
@@ -37,6 +43,19 @@ export default function (Template) {
           // sync call(目前不能返回结果,不知道为什么)
           var result2 = Meteor.call('bar');
           console.log('bar sync result2:' , result2);
+
+      },
+      'click #uptimeBtn' : () => {
+          console.log('1');
+          // async call
+          Meteor.call('uptime', function (error, result) {
+            console.log('uptime async callback result:', result);
+          } );
+
+      },
+      'click #plus1' : () => {
+          // increment the counter when button is clicked
+          instance.counter.set(instance.counter.get() + 1);
 
       }
     });

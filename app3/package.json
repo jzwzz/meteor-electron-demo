@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "bcrypt": "^0.8.7",
+    "ssh2": "^0.5.4",
     "shelljs": "^0.7.5"
   },
   "devDependencies": {},
