@@ -4,7 +4,7 @@ app with meson:electron
 app2 just meteor web
 
 
-运行：
-
-
-修改： 
+issue:
+=======================================
+  1、加入ssh2包
+  2、后台返回值显示到页面

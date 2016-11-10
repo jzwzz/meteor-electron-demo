@@ -1,8 +1,12 @@
 import { Meteor } from 'meteor/meteor'
 
+import { ReactiveDict } from 'meteor/reactive-dict'
 
-// TODO: call this in entry file
 export default function (Template) {
+
+    Template['checkComponent'].onCreated(function bodyOnCreated() {
+      this.state = new ReactiveDict();
+    });
 
     Template['checkComponent'].helpers({
       tasks: [
@@ -12,12 +16,14 @@ export default function (Template) {
       ],
     });
 
+
     Template['checkComponent'].events({
       'click #abc' : () => {
           console.log('1');
           // async call
           Meteor.call('foo', '1', 2,[1,2,3], function (error, result) {
             console.log('foo async callback result:', result);
+            instance.state.set('hideCompleted', result);
           } );
 
           Meteor.call('bar', function (error, result) {
