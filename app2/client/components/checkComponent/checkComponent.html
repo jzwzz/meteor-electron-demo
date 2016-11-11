@@ -1,16 +1,142 @@
 <template name="checkComponent">
     <h1>checkComponent Component</h1>
-
     <button id='uptimeBtn'>uptime</button>
-
-
-    <button id='plus1'>plus1</button>
-
+	<button id='plus1'>plus1</button>
     <button id='syncCall'>syncCall</button>
-
 
     <div>
       2 / {{status}} / {{counter}}
     </div>
-
+	<div>
+		<div id="wrapper">
+		    <nav class="navbar-default navbar-static-side" role="navigation">
+		        <div class="sidebar-collapse">
+		            <ul class="nav metismenu" id="side-menu">
+		                <li class="nav-header">
+		                    <div class="dropdown profile-element"> 
+		                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+		                            <span class="clear">
+		                            	<span class="block m-t-xs text-center">
+		                            		<h4 class="font-bold">瑞和智电<br/></h4>
+		                            		<h4 class="font-bold">充电桩安装检测平台</h4>
+		                             	</span>
+		                            </span>
+		                        </a>
+		                    </div>
+		                </li>
+		                <li>
+		                    <a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">选择电桩</span></a>
+		                </li>
+		                <li>
+		                    <a href="index.html"><i class="fa fa-check-square-o"></i> <span class="nav-label">单项检测</span> <span class="fa arrow"></span></a>
+		                    <ul class="nav nav-second-level collapse">
+		                        <li><a href="index.html">电表</a></li>
+		                        <li><a href="#">充电板</a></li>
+		                        <li><a href="#">刷卡器</a></li>
+		                        <li><a href="#">屏幕</a></li>
+		                        <li><a href="#">通信</a></li>
+		                        <li><a href="#">WIFI模块</a></li>
+		                        <li><a href="#">3G/4G模块</a></li>
+		                        <li><a href="#">网线接入</a></li>
+		                    </ul>
+		                </li>
+		                <li>
+		                    <a href="index.html"><i class="fa fa-download"></i> <span class="nav-label">安装程序</span> <span class="fa arrow"></span></a>
+		                    <ul class="nav nav-second-level collapse">
+		                        <li><a href="index.html">安装屏幕程序</a></li>
+		                        <li><a href="#">安装控制程序</a></li>
+		                        <li><a href="#">配置电桩信息</a></li>
+		                    </ul>
+		                </li>
+		                <li>
+		                    <a href="#"><i class="fa fa-life-ring"></i> <span class="nav-label">整桩检测</span></a>
+		                </li>
+		            </ul>
+		        </div>
+		    </nav>
+	        <div id="page-wrapper" class="gray-bg">
+		        <div class="row border-bottom">
+		        <nav class="navbar navbar-static-top" role="navigation" >
+		        <div class="navbar-header">
+		            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+		        </div>
+		        </nav>
+	        </div>
+	        <div class="row wrapper border-bottom white-bg page-heading">
+	            <div class="col-lg-10">
+	                <h2>单项检测 </h2>
+	            </div>
+	        </div>
+		        <div class="animated fadeInRight article">
+		            <div class="row">
+		                <div class="col-lg-12">
+		                    <div class="ibox">
+		                        <div class="ibox float-e-margins">
+				                    <div class="ibox-title">
+				                    	<div class="col-lg-4">
+				                    		<h3>当前设备：<span>国标单相电表</span></h3>
+				                    	</div>
+										<div class="col-lg-6 form-group">
+											<input type="button" value="开始检测" class="btn btn-primary"/>
+										</div>
+				                    </div>
+				                    <div class="ibox-content">
+				                        <div class="table-responsive">
+				                    		<table class="table table-bordered">
+										        <thead>
+										        <tr>
+										            <th class="sortable sorted desc"><a href="#">检测项</a></th>
+										            <th  class="sortable"><a href="#">检测结果</a></th>
+										            <th class="sortable"><a href="#">返回值</a></th>
+										            <th class="sortable"><a href="#">操作</a></th>
+										        </tr>
+										        </thead>
+										        <tbody>
+										            <tr>
+										                <td>电表地址</td>
+										                <td >正常</td>
+										                <td>电表地址为16080000021</td>
+										                <td ><button class="btn btn-xs btn-default">检测</button></td>
+										            </tr>
+										            <tr>
+										                <td>通信</td>
+										                <td >异常</td>
+										                <td>通讯异常</td>
+										                <td ><button class="btn btn-xs btn-default">检测</button></td>
+										            </tr>
+										            <tr>
+										                <td>实时电流</td>
+										                <td >未检测</td>
+										                <td>-</td>
+										                <td ><button class="btn btn-xs btn-default">检测</button></td>
+										            </tr>
+										            <tr>
+										                <td>实时电压</td>
+										                <td >未检测</td>
+										                <td>-</td>
+										                <td ><button class="btn btn-xs btn-default">检测</button></td>
+										            </tr>
+										            <tr>
+										                <td>累计电量</td>
+										                <td >未检测</td>
+										                <td>-</td>
+										                <td><button class="btn btn-xs btn-default">检测</button></td>
+										            </tr>
+										        </tbody>
+										    </table>
+				                        </div>
+				                    </div>
+				                </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="footer">
+		            <div>
+		                © 2015-2016 <a href="http://re-watt.com">瑞和智电 </a>
+		            </div>
+		        </div>
+	    	</div>
+        </div>
+	</div>
 </template>
