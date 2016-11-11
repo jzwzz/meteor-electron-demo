@@ -12,4 +12,7 @@ export default function (FlowRouter) {
   FlowRouter.route('/checkComponent', {
     action: () => renderSlim('checkComponent')
   });
+  FlowRouter.route('/shellDemo', {
+    action: () => renderSlim('shellDemo')
+  });
 }
