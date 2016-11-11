@@ -46,9 +46,20 @@ export default function (Template) {
         // increment the counter when button is clicked
         // instance.counter.set(instance.counter.get() + 1);
         Meteor.call('syncCall', function (error, result) {
-          console.log('uptime async callback result:', result);
+          console.log('syncCall async callback result:', result);
           instance.counter.set(instance.counter.get() + result);
         } );
-    }
+    },
+    'click #copySD' : (event, instance) =>{
+    	console.log('copySD....');
+    	Meteor.call('uptime', function (error, result) {
+          console.log('uptime async callback result:', result);
+          instance.counter.set(instance.counter.get() + result);
+     });
+    	Meteor.call('syncCall', function (error, result) {
+          console.log('syncCall async callback result:', result);
+          instance.counter.set(instance.counter.get() + result);
+     });
+  }
   });
 }
