@@ -74,18 +74,23 @@ export default function () {
        console.log("copySD Done", result);
        return "copySD Done" + ',' + result;
      },
-	update : function () {
+		update : function () {
       var path=require('path');
       var path=process.cwd().slice(0,-36)+'/private/local/';
       console.log(path);
-      var result = shell.exec('sh '+path+'20.sh', {silent:true}).stdout;
-      console.log("update Done", result);
-      return "update Done" + ',' + result;
+//    var result = shell.exec('sh '+path+'20.sh', {silent:true}).stdout;
+//    console.log("update Done", result);
+//    return "update Done" + ',' + result;
      },
     formateSD : function () {
       var result = shell.exec('sh', {silent:true}).stdout;
       console.log("formateSD Done", result);
       return "formateSD Done" + ',' + result;
+     },
+     installProgram : function () {
+      var result = shell.exec('sh', {silent:true}).stdout;
+      console.log("installProgram Done", result);
+      return "installProgram" + ',' + result;
      },
      setInformation : function () {
       var result = shell.exec('sh', {silent:true}).stdout;

@@ -22,6 +22,7 @@ export default function (Template) {
 
   Template['checkComponent'].events({
     'click #copySD' : (event, instance) =>{
+    	event.preventDefault();
     	console.log('copySD....');
     	Meteor.call('copySD', function (error, result) {
           console.log('copySD.....'+result);
@@ -29,6 +30,7 @@ export default function (Template) {
      });
   	},
   	'click #update' : (event, instance) =>{
+  		event.preventDefault();
     	console.log('update....');
     	Meteor.call('update', function (error, result) {
           console.log('update.....', result);
@@ -39,6 +41,13 @@ export default function (Template) {
     	console.log('formateSD....');
     	Meteor.call('formateSD', function (error, result) {
           console.log('formateSD.....', result);
+          instance.counter.set(instance.counter.get() + result);
+     });
+  	},
+  	'click #installProgram' : (event, instance) =>{
+    	console.log('installProgram....');
+    	Meteor.call('installProgram', function (error, result) {
+          console.log('installProgram.....', result);
           instance.counter.set(instance.counter.get() + result);
      });
   	},
