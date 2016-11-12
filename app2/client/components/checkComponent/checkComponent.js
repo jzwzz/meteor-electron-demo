@@ -38,6 +38,7 @@ export default function (Template) {
      });
   	},
   	'click #formateSD' : (event, instance) =>{
+  	    event.preventDefault();
     	console.log('formateSD....');
     	Meteor.call('formateSD', function (error, result) {
           console.log('formateSD.....', result);
@@ -45,6 +46,7 @@ export default function (Template) {
      });
   	},
   	'click #installProgram' : (event, instance) =>{
+    	event.preventDefault();
     	console.log('installProgram....');
     	Meteor.call('installProgram', function (error, result) {
           console.log('installProgram.....', result);
@@ -52,9 +54,12 @@ export default function (Template) {
      });
   	},
   	'click #setInformation' : (event, instance) =>{
+  	    event.preventDefault();
     	console.log('setInformation....');
-    	Meteor.call('setInformation', function (error, result) {
-          console.log('setInformation.....', result);
+    	var data = $('#chargeconnectorId').val();
+    	console.log(data);
+    	Meteor.call('setInformation',data, function (error, result) {
+          console.log('result is :', result);
           instance.counter.set(instance.counter.get() + result);
      });
   	}
