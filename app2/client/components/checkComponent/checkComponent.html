@@ -1,41 +1,44 @@
 <template name="checkComponent">
-    <h1 class="text-center">瑞和智电智能充电桩组装检测平台</h1>
-    	<div class="row">
-    		<tabel class='table'>
-    		<thead>
-    			<tr colspan="4">
-    				<td>安装</td>
-    			</tr>
-    		</thead>
-    		<tbody>
-    			<tr>
-    				<td><button id='formate' class="btn btn-lg btn-primary">格式化SD卡</button></td>
-    				<td><button id='copySD'  class="btn btn-lg btn-primary">向卡中刷程序</button></td>
-    				<td><button id='update' class="btn btn-lg btn-primary">升级程序</button></td>
-    				<td><button id='setInformation' class="btn btn-lg btn-primary">设定桩信息</button></td>
-    			</tr>
-    		</tbody>
-    	</tabel>
-    	</div>
-    	<div class="row">
-    		<tabel class='table'>
-    		<thead>
-    			<tr colspan="4">
-    				<td>单项检测</td>
-    			</tr>
-    		</thead>
-    		<tbody>
-    			<tr>
-    				<td><button id='formate' class="btn btn-lg btn-primary">电表</button></td>
-    				<td><button id='copySD'  class="btn btn-lg btn-primary">屏幕</button></td>
-    				<td><button id='update' class="btn btn-lg btn-primary">刷卡器</button></td>
-    				<td><button id='setInformation' class="btn btn-lg btn-primary">充电板</button></td>
-    				<td><button id='setInformation' class="btn btn-lg btn-primary">WIFI</button></td>
-    				<td><button id='setInformation' class="btn btn-lg btn-primary">3G/4G模块</button></td>
-    				<td><button id='setInformation' class="btn btn-lg btn-primary">无线接入模块</button></td>
-    			</tr>
-    		</tbody>
-    	</tabel>	
+    <h1 class="text-center">充电桩组装检测平台</h1>
+    	<div class="container">
+    		<div class="row">
+	    		<tabel class='table'>
+		    		<thead>
+		    			<tr colspan="5">
+		    				<td>安装</td>
+		    			</tr>
+		    		</thead>
+		    		<tbody>
+		    			<tr>
+		    				<td><button id='formateSD' class="btn btn-lg btn-primary">格式化SD卡</button></td>
+		    				<td><button id='copySD' class="btn btn-lg btn-primary">向卡中刷程序</button></td>
+		    				<td><button id="installProgram" class="btn btn-lg btn-primary">安装程序</button></td>
+		    				<td><button id='update' class="btn btn-lg btn-primary">升级程序</button></td>
+		    				<td><button id='setInformation' class="btn btn-lg btn-primary">配置信息</button></td>
+		    			</tr>
+		    		</tbody>
+	    		</tabel>
+    		</div>
+	    	<div class="row">
+	    		<tabel class='table'>
+		    		<thead>
+		    			<tr colspan="7">
+		    				<td>单项检测</td>
+		    			</tr>
+		    		</thead>
+		    		<tbody>
+		    			<tr>
+		    				<td><button id='meter' class="btn btn-lg btn-primary">电表</button></td>
+		    				<td><button id='pimu'  class="btn btn-lg btn-primary">屏幕</button></td>
+		    				<td><button id='skq' class="btn btn-lg btn-primary">刷卡器</button></td>
+		    				<td><button id='cdb' class="btn btn-lg btn-primary">充电板</button></td>
+		    				<td><button id='wifi' class="btn btn-lg btn-primary">WIFI</button></td>
+		    				<td><button id='3g' class="btn btn-lg btn-primary">3G/4G模块</button></td>
+		    				<td><button id='w' class="btn btn-lg btn-primary">网线接入模块</button></td>
+		    			</tr>
+		    		</tbody>
+		    	</tabel>	
+	    	</div>
     	</div>
 	<!--<div>
 		<div id="wrapper">

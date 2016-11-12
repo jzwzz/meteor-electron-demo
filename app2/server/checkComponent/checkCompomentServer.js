@@ -12,27 +12,19 @@ export default function () {
 
   Meteor.methods({
     foo: function (arg1, arg2, arg3) {
-
       check(arg1, String);
       check(arg2, Number);
       check(arg3, [Number]);
-
       var version = shell.exec('node --version', {silent:true}).stdout;
-
       console.log("some return value", version);
       return "some return value" + ',' + version;
     },
     bar: function () {
-
       var result = shell.exec('ls -l', {silent:true}).stdout;
-
       return "baz result:" + result;
     },
     uptime: function(){
-
-var result2 = '2';
-
-
+				var result2 = '2';
         // var x = Meteor.wrapAsync(function(error, result){
           var ssh2Client = require('ssh2').Client;
                   var conn = new ssh2Client();
@@ -65,15 +57,45 @@ var result2 = '2';
         // x();
         console.log('22222');
         return '12' + result2;
-
         // return 'uptime result';
     },
-    doCpSD: function () {
-
-          var version = shell.exec('sh /home/zz/Desktop/meteor-electron-demo/app2/private/local/10.sh', {silent:true}).stdout;
-
-          console.log("some return value", version);
-          return "some return value" + ',' + version;
-        },
+//    copySD : function () {
+//      var result = shell.exec('sh /home/zz/Desktop/meteor-electron-demo/app2/private/local/10.sh', {silent:true}).stdout;
+                                    ///home/zz/Desktop/meteor-electron-demo/app2/.meteor/local/build/programs/private/local/
+//      console.log("copySD Done", result);
+//      return "copySD Done" + ',' + result;
+//     },
+     copySD: function () {
+       console.log('begin copySD.....');
+       var path=require('path');
+       var path=process.cwd().slice(0,-36)+'/private/local/';
+       console.log(path);
+       var result = shell.exec('sh '+path+'10.sh', {silent:true}).stdout;
+       console.log("copySD Done", result);
+       return "copySD Done" + ',' + result;
+     },
+		update : function () {
+      var path=require('path');
+      var path=process.cwd().slice(0,-36)+'/private/local/';
+      console.log(path);
+//    var result = shell.exec('sh '+path+'20.sh', {silent:true}).stdout;
+//    console.log("update Done", result);
+//    return "update Done" + ',' + result;
+     },
+    formateSD : function () {
+      var result = shell.exec('sh', {silent:true}).stdout;
+      console.log("formateSD Done", result);
+      return "formateSD Done" + ',' + result;
+     },
+     installProgram : function () {
+      var result = shell.exec('sh', {silent:true}).stdout;
+      console.log("installProgram Done", result);
+      return "installProgram" + ',' + result;
+     },
+     setInformation : function () {
+      var result = shell.exec('sh', {silent:true}).stdout;
+      console.log("setInformation Done", result);
+      return "setInformation Done" + ',' + result;
+     }
   });
 }

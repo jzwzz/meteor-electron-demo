@@ -22,18 +22,41 @@ export default function (Template) {
 
   Template['checkComponent'].events({
     'click #copySD' : (event, instance) =>{
+    	event.preventDefault();
     	console.log('copySD....');
-    	Meteor.call('doCpSD', function (error, result) {
-          console.log('doShell.....', result);
+    	Meteor.call('copySD', function (error, result) {
+          console.log('copySD.....'+result);
           instance.counter.set(instance.counter.get() + result);
      });
   	},
   	'click #update' : (event, instance) =>{
+  		event.preventDefault();
     	console.log('update....');
     	Meteor.call('update', function (error, result) {
           console.log('update.....', result);
           instance.counter.set(instance.counter.get() + result);
      });
   	},
+  	'click #formateSD' : (event, instance) =>{
+    	console.log('formateSD....');
+    	Meteor.call('formateSD', function (error, result) {
+          console.log('formateSD.....', result);
+          instance.counter.set(instance.counter.get() + result);
+     });
+  	},
+  	'click #installProgram' : (event, instance) =>{
+    	console.log('installProgram....');
+    	Meteor.call('installProgram', function (error, result) {
+          console.log('installProgram.....', result);
+          instance.counter.set(instance.counter.get() + result);
+     });
+  	},
+  	'click #setInformation' : (event, instance) =>{
+    	console.log('setInformation....');
+    	Meteor.call('setInformation', function (error, result) {
+          console.log('setInformation.....', result);
+          instance.counter.set(instance.counter.get() + result);
+     });
+  	}
   });
 }
