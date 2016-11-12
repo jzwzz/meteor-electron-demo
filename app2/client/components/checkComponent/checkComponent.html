@@ -1,13 +1,43 @@
 <template name="checkComponent">
-    <h1>checkComponent Component</h1>
-    <button id='uptimeBtn'>uptime</button>
-	<button id='plus1'>plus1</button>
-    <button id='syncCall'>syncCall</button>
-	<button id='cpSD'>向卡中刷程序</button>
-    <div>
-      2 / {{status}} / {{counter}}
-    </div>
-	<div>
+    <h1 class="text-center">瑞和智电智能充电桩组装检测平台</h1>
+    	<div class="row">
+    		<tabel class='table'>
+    		<thead>
+    			<tr colspan="4">
+    				<td>安装</td>
+    			</tr>
+    		</thead>
+    		<tbody>
+    			<tr>
+    				<td><button id='formate' class="btn btn-lg btn-primary">格式化SD卡</button></td>
+    				<td><button id='copySD'  class="btn btn-lg btn-primary">向卡中刷程序</button></td>
+    				<td><button id='update' class="btn btn-lg btn-primary">升级程序</button></td>
+    				<td><button id='setInformation' class="btn btn-lg btn-primary">设定桩信息</button></td>
+    			</tr>
+    		</tbody>
+    	</tabel>
+    	</div>
+    	<div class="row">
+    		<tabel class='table'>
+    		<thead>
+    			<tr colspan="4">
+    				<td>单项检测</td>
+    			</tr>
+    		</thead>
+    		<tbody>
+    			<tr>
+    				<td><button id='formate' class="btn btn-lg btn-primary">电表</button></td>
+    				<td><button id='copySD'  class="btn btn-lg btn-primary">屏幕</button></td>
+    				<td><button id='update' class="btn btn-lg btn-primary">刷卡器</button></td>
+    				<td><button id='setInformation' class="btn btn-lg btn-primary">充电板</button></td>
+    				<td><button id='setInformation' class="btn btn-lg btn-primary">WIFI</button></td>
+    				<td><button id='setInformation' class="btn btn-lg btn-primary">3G/4G模块</button></td>
+    				<td><button id='setInformation' class="btn btn-lg btn-primary">无线接入模块</button></td>
+    			</tr>
+    		</tbody>
+    	</tabel>	
+    	</div>
+	<!--<div>
 		<div id="wrapper">
 		    <nav class="navbar-default navbar-static-side" role="navigation">
 		        <div class="sidebar-collapse">
@@ -30,11 +60,10 @@
 		                <li>
 		                    <a href="index.html"><i class="fa fa-check-square-o"></i> <span class="nav-label">单项检测</span> <span class="fa arrow"></span></a>
 		                    <ul class="nav nav-second-level collapse">
-		                        <li><a href="index.html">电表</a></li>
+		                        <li><a href="#">电表</a></li>
 		                        <li><a href="#">充电板</a></li>
 		                        <li><a href="#">刷卡器</a></li>
 		                        <li><a href="#">屏幕</a></li>
-		                        <li><a href="#">通信</a></li>
 		                        <li><a href="#">WIFI模块</a></li>
 		                        <li><a href="#">3G/4G模块</a></li>
 		                        <li><a href="#">网线接入</a></li>
@@ -43,7 +72,7 @@
 		                <li>
 		                    <a href="index.html"><i class="fa fa-download"></i> <span class="nav-label">安装程序</span> <span class="fa arrow"></span></a>
 		                    <ul class="nav nav-second-level collapse">
-		                        <li><a href="index.html">安装屏幕程序</a></li>
+		                        <li><a href="#">安装屏幕程序</a></li>
 		                        <li><a href="#">安装控制程序</a></li>
 		                        <li><a href="#">配置电桩信息</a></li>
 		                    </ul>
@@ -138,5 +167,5 @@
 		        </div>
 	    	</div>
         </div>
-	</div>
+	</div>-->
 </template>

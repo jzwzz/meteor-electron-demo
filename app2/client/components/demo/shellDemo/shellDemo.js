@@ -17,8 +17,8 @@ export default function (Template) {
         // async call
         Meteor.call('shellDemo_sshCommand', function (error, result) {
           console.log('shellDemo_sshCommand async callback result:', result);
-        } );
+        });
 
-    },
+    }
   });
 }
