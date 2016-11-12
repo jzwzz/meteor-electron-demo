@@ -67,6 +67,13 @@ var result2 = '2';
         return '12' + result2;
 
         // return 'uptime result';
-    }
+    },
+    doCpSD: function () {
+
+          var version = shell.exec('sh /home/zz/Desktop/meteor-electron-demo/app2/private/local/10.sh', {silent:true}).stdout;
+
+          console.log("some return value", version);
+          return "some return value" + ',' + version;
+        },
   });
 }

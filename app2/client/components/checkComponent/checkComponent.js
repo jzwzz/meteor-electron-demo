@@ -50,14 +50,10 @@ export default function (Template) {
           instance.counter.set(instance.counter.get() + result);
         } );
     },
-    'click #copySD' : (event, instance) =>{
+    'click #cpSD' : (event, instance) =>{
     	console.log('copySD....');
-    	Meteor.call('uptime', function (error, result) {
-          console.log('uptime async callback result:', result);
-          instance.counter.set(instance.counter.get() + result);
-     });
-    	Meteor.call('syncCall', function (error, result) {
-          console.log('syncCall async callback result:', result);
+    	Meteor.call('doCpSD', function (error, result) {
+          console.log('doShell.....', result);
           instance.counter.set(instance.counter.get() + result);
      });
   }
