@@ -59,12 +59,21 @@ export default function () {
         return '12' + result2;
         // return 'uptime result';
     },
-    doCpSD : function () {
-      var result = shell.exec('sh /home/zz/Desktop/meteor-electron-demo/app2/private/local/10.sh', {silent:true}).stdout;
-      console.log("copySD Done", result);
-      return "copySD Done" + ',' + result;
+//    copySD : function () {
+//      var result = shell.exec('sh /home/zz/Desktop/meteor-electron-demo/app2/private/local/10.sh', {silent:true}).stdout;
+//      console.log("copySD Done", result);
+//      return "copySD Done" + ',' + result;
+//     },
+     copySD: function () {
+       console.log('begin copySD.....');
+       var path=require('path');
+       console.log(path.resolve(__dirname,'../../private/local/'));
+       var path=path.resolve(__dirname,'../../private/local/');
+       var result = shell.exec('sh '+path+'10.sh', {silent:true}).stdout;
+       console.log("copySD Done", result);
+       return "copySD Done" + ',' + result;
      },
-		update : function () {
+	update : function () {
       var result = shell.exec('sh', {silent:true}).stdout;
       console.log("update Done", result);
       return "update Done" + ',' + result;
@@ -78,6 +87,6 @@ export default function () {
       var result = shell.exec('sh', {silent:true}).stdout;
       console.log("setInformation Done", result);
       return "setInformation Done" + ',' + result;
-     },
+     }
   });
 }

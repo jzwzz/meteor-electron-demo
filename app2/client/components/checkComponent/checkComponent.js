@@ -24,7 +24,7 @@ export default function (Template) {
     'click #copySD' : (event, instance) =>{
     	console.log('copySD....');
     	Meteor.call('copySD', function (error, result) {
-          console.log('copySD.....', result);
+          console.log('copySD.....'+result);
           instance.counter.set(instance.counter.get() + result);
      });
   	},
@@ -48,6 +48,6 @@ export default function (Template) {
           console.log('setInformation.....', result);
           instance.counter.set(instance.counter.get() + result);
      });
-  	},
+  	}
   });
 }
